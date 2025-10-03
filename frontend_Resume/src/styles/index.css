@@ -1,0 +1,72 @@
+/* 全局样式重置与基础设置 */
+body {
+    margin: 0;
+    padding: 0;
+    /* 弹性布局使登录框居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 确保占满视口高度 */
+    /* 背景图（可替换为自己的图片或在线地址） */
+    background: url('../../public/pic/hemeng.png') no-repeat center center;
+    background-size: cover; /* 背景图自适应覆盖 */
+    font-family: "Microsoft Yahei", sans-serif; /* 中文友好字体 */
+}
+
+/* 登录框容器 */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    padding: 30px 40px;
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 阴影增强层次 */
+    width: 300px; /* 登录框宽度 */
+    text-align: center; /* 内部元素居中 */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* 输入组（图标+输入框） */
+.input-group {
+    display: flex; /* 弹性布局使图标和输入框同行 */
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.input-group .icon {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #666;
+}
+
+.input-group input {
+    flex: 1; /* 输入框占满剩余空间 */
+    border: none; /* 去掉默认边框 */
+    outline: none; /* 去掉聚焦外边框 */
+    padding: 12px 0;
+    font-size: 16px;
+    background-color: transparent; /* 透明背景，继承父容器半透明 */
+}
+
+/* 登录按钮 */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3673e4; /* 蓝色按钮 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /*  hover时指针变化 */
+    transition: background-color 0.3s ease; /* 背景色过渡动画 */
+}
+
+.login-btn:hover {
+    background-color: #4682B4; /* hover时深色 */
+}

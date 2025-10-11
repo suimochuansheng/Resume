@@ -1,0 +1,33 @@
+# 前端屏蔽规则
+# 通用忽略规则（操作系统、编辑器等）
+.DS_Store       # Mac
+Thumbs.db       # Windows
+.idea/          # PyCharm
+.vscode/        # VS Code
+*.swp           # Vim 临时文件
+*.swo
+*~              # 临时文件
+tmp/
+*.log
+
+# 前端分支：忽略后端文件夹（不提交后端代码）
+backend_Resume/
+
+# 前端自身无需提交的文件
+# Node 依赖
+frontend_Resume/node_modules/
+# 构建产物
+frontend_Resume/dist/
+frontend_Resume/build/
+# npm/yarn 缓存及日志
+frontend_Resume/.npm/
+frontend_Resume/.yarn/
+frontend_Resume/.pnp/
+frontend_Resume/.pnp.js
+frontend_Resume/npm-debug.log*
+frontend_Resume/yarn-debug.log*
+frontend_Resume/yarn-error.log*
+# 环境变量文件
+frontend_Resume/.env
+frontend_Resume/.env.local
+frontend_Resume/.env.*.local

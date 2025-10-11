@@ -1,13 +1,65 @@
-#main分支忽略文件
-# 操作系统相关
-#.DS_Store               # Mac
-Thumbs.db               # Windows
+# ###########################
+# 通用忽略规则
+# ###########################
+# 操作系统生成文件
+.DS_Store       # macOS
+Thumbs.db       # Windows
 
-# 编辑器/IDE配置
-.idea/                  # PyCharm
-.vscode/                # VS Code
-#*.sublime-*             # Sublime
+# 编辑器/IDE 配置文件
+.idea/          # IntelliJ 系列（如 PyCharm）
+.vscode/        # VS Code
+*.swp           # Vim 临时文件
+*.swo           # Vim 临时文件
+*~              # 临时文件
 
-# 屏蔽临时文件
-tmp/
+# 日志文件
+logs/
 *.log
+
+# 环境变量文件（包含敏感信息）
+.env
+.env.local
+.env.*.local
+
+# ###########################
+# Python/Django 后端忽略规则
+# ###########################
+# 虚拟环境
+venv/
+env/
+ENV/
+*.venv
+
+# Python 编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django 相关
+db.sqlite3      # 本地 SQLite 数据库
+db.sqlite3-journal
+media/          # 用户上传文件
+staticfiles/    # collectstatic 生成的静态文件
+*.egg-info/
+dist/
+build/
+
+# ###########################
+# 前端忽略规则
+# ###########################
+# Node 依赖
+frontend_Resume/node_modules/
+
+# 前端构建产物
+frontend_Resume/dist/
+frontend_Resume/build/
+
+# npm/yarn 缓存及日志
+frontend_Resume/.npm/
+frontend_Resume/.yarn/
+frontend_Resume/.pnp/
+frontend_Resume/.pnp.js
+frontend_Resume/npm-debug.log*
+frontend_Resume/yarn-debug.log*
+frontend_Resume/yarn-error.log*

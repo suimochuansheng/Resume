@@ -1,65 +1,39 @@
-# ###########################
-# 通用忽略规则
-# ###########################
-# 操作系统生成文件
-.DS_Store       # macOS
+# 后端分支规则文件
+# 通用忽略规则（操作系统、编辑器等）
+.DS_Store       # Mac
 Thumbs.db       # Windows
-
-# 编辑器/IDE 配置文件
-.idea/          # IntelliJ 系列（如 PyCharm）
+.idea/          # PyCharm
 .vscode/        # VS Code
 *.swp           # Vim 临时文件
-*.swo           # Vim 临时文件
+*.swo
 *~              # 临时文件
-
-# 日志文件
-logs/
+tmp/
 *.log
 
-# 环境变量文件（包含敏感信息）
-.env
-.env.local
-.env.*.local
+# 后端分支：忽略前端文件夹（不提交前端代码）
+frontend_Resume/
 
-# ###########################
-# Python/Django 后端忽略规则
-# ###########################
+# 后端自身无需提交的文件
 # 虚拟环境
-venv/
-env/
-ENV/
-*.venv
-
+backend_Resume/venv/
+backend_Resume/env/
+backend_Resume/ENV/
+backend_Resume/*.venv
 # Python 编译文件
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-
-# Django 相关
-db.sqlite3      # 本地 SQLite 数据库
-db.sqlite3-journal
-media/          # 用户上传文件
-staticfiles/    # collectstatic 生成的静态文件
-*.egg-info/
-dist/
-build/
-
-# ###########################
-# 前端忽略规则
-# ###########################
-# Node 依赖
-frontend_Resume/node_modules/
-
-# 前端构建产物
-frontend_Resume/dist/
-frontend_Resume/build/
-
-# npm/yarn 缓存及日志
-frontend_Resume/.npm/
-frontend_Resume/.yarn/
-frontend_Resume/.pnp/
-frontend_Resume/.pnp.js
-frontend_Resume/npm-debug.log*
-frontend_Resume/yarn-debug.log*
-frontend_Resume/yarn-error.log*
+backend_Resume/__pycache__/
+backend_Resume/*.py[cod]
+backend_Resume/*$py.class
+backend_Resume/*.so
+# Django 本地数据库
+backend_Resume/db.sqlite3
+backend_Resume/db.sqlite3-journal
+# 用户上传文件和静态文件构建产物
+backend_Resume/media/
+backend_Resume/staticfiles/
+backend_Resume/*.egg-info/
+backend_Resume/dist/
+backend_Resume/build/
+# 环境变量文件
+backend_Resume/.env
+backend_Resume/.env.local
+backend_Resume/.env.*.local

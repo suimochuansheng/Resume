@@ -1,0 +1,31 @@
+# 后端分支屏蔽文件
+# Python虚拟环境（必须屏蔽，避免提交依赖包）
+venv/
+env/
+*.venv/
+
+# Python编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django本地配置（不要提交敏感信息）
+local_settings.py       # 本地开发配置（如数据库密码）
+.env                    # 环境变量文件
+
+# Django数据库文件（仅本地开发用，生产环境不用）
+db.sqlite3
+db.sqlite3-journal
+
+# 静态文件/媒体文件（通常通过命令生成，无需提交）
+media/                  # 用户上传的文件
+staticfiles/            # 收集的静态文件
+
+# 日志文件
+logs/
+*.log
+
+# 测试相关
+.pytest_cache/
+.coverage
+htmlcov/

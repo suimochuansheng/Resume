@@ -1,0 +1,13 @@
+#main分支忽略文件
+# 操作系统相关
+#.DS_Store               # Mac
+Thumbs.db               # Windows
+
+# 编辑器/IDE配置
+.idea/                  # PyCharm
+.vscode/                # VS Code
+#*.sublime-*             # Sublime
+
+# 屏蔽临时文件
+tmp/
+*.log
